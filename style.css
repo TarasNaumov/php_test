@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background: #ffd35c;
+    background: linear-gradient(40deg, #00a6ff, #ff6363);
     padding: 20px;
 }
 
@@ -20,7 +20,8 @@
     gap: 15px;
     width: 80%;
     padding: 20px;
-    background: #fbc403;
+    background: #fff;
+    border-radius: 10px;
 }
 
 .answers {
@@ -43,7 +44,7 @@
 }
 
 .answers label:has(input:checked) {
-    background: #8f6868;
+    background: linear-gradient(30deg, #b8fff1, #4eff60);
 }
 
 .answers label input {
@@ -64,4 +65,38 @@ label:nth-child(3) {
 
 label:nth-child(4) {
     background: #f7ff07;
+}
+
+button[type="submit"] {
+    padding: 20px 60px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #98f0ff;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #ff5c5c;
+}
+
+.profile {
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+.profile img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0px solid #000;
+}
+
+.profile img:hover {
+    border: 1px solid #000;
 }

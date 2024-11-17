@@ -15,19 +15,7 @@
 <body>
     <form action="result.php" method="post">
         <div class="wrapper">
-            <?php if (!isset($_SESSION['name'])) {?>
-                <?php setcookie('registration'); ?>
-                <?php setcookie('login'); ?>
-                <?php header('Location: index.php'); ?>
-            <?php } ?>
-            <a href="profile.php" class="profile"><img src="img/profile.jpg"></a>
-            <?php if ($_COOKIE['registration'] == '') {
-                header("Location: registration.php");
-            } ?>
-            <?php if ($_COOKIE['login'] == '') {
-                header("Location: login.php");
-            } ?>
-            <?php $_SESSION['startTime'] = time(); ?>
+            <?php require "functional/testCookie.php"; ?>
             <?php foreach ($randomQuestions as $index) {
                 $question = $quiz[$index] ?>
                 <div>

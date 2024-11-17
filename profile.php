@@ -1,20 +1,10 @@
-<?php session_start(); ?>
+<?php require "functional/profilSession.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php
-        if ($_COOKIE['login'] == '') {
-            header("Location: login.php");
-        }
-        if (!isset($_SESSION['name'])) {
-            setcookie('registration');
-            setcookie('login');
-            header('Location: index.php');
-        }
-    ?>
     <title>Профіль</title>
     <link rel="stylesheet" href="profile.css">
 </head>
@@ -22,6 +12,10 @@
 <body>
     <div class="login_data">
         <h2>Дані профілю</h2>
+        <a href="avatar.php" class="avatar">
+        <img src="img/<?= file_exists("img/" . ($_SESSION['avatar'] ?? 'profile.jpg')) ? $_SESSION['avatar'] : "profile.jpg" ?>">
+            <b>avatar</b>
+        </a>
         <table>
             <tr>
                 <td>Name</td>
@@ -41,23 +35,8 @@
         </form>
     </div>
     <div class="last_test">
-        <?php if (!isset($_SESSION['score']) || !isset($_SESSION['response_rate']) || !isset($_SESSION['date'])) {
-            echo "Ви повині пройти тест щоб отримати остані дані.";
-        } else { ?>
-            <h2>Дані про останє проходження</h2>
-            <table>
-                <tr>
-                    <td><?php echo "Ваш результат: " . $_SESSION['score'] . " з 5"; ?></td>
-                </tr>
-                <tr>
-                    <td><?php echo "Відсоток правильних відповідей: " . $_SESSION['response_rate'] . "% з 100%" ?></td>
-                </tr>
-                <tr>
-                    <td><?php echo "Дата: " . $_SESSION['date'] ?></td>
-                </tr>
-            </table>
-        <?php } ?>
-        <a href="index.php">Повернутись до тесту</a>
+        <?php require "functional/lastTest.php"; ?>
+        <a href="index.php" class="test">Пройти тест</a>
     </div>
 </body>
 

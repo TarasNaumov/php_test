@@ -51,7 +51,27 @@ input[type="submit"]:hover {
     background: #dd4a4a;
 }
 
-a {
+.avatar img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #000;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.test {
     margin-top: 5px;
     width: fit-content;
     position: relative;

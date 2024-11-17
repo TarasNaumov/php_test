@@ -42,3 +42,25 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background: #ff6363;
 }
+
+input {
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid #00a6ff;
+}
+
+form p {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+form label {
+    cursor: pointer;
+    margin-bottom: 5px;
+}

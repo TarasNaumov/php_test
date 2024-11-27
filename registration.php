@@ -1,5 +1,5 @@
 <?php require "functional/regSession.php";?>
-<link rel="stylesheet" href="reg_log_style.css">
+<link rel="stylesheet" href="style/reg_log_style.css">
 <form action="registration.php" method="post">
     <h2>Registration form</h2>
     <p><input type="text" id="name" value="<?= $_POST['name'] ?? '' ?>" name="name"><label for="name">Ваше ім'я</label></p>

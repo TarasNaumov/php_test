@@ -1,0 +1,26 @@
+body,
+.wrapper {
+    background: linear-gradient(40deg, #0b4462, #5e1717) no-repeat;
+}
+
+.result,
+.last_test,
+.login_data,
+.all_user,
+.all_result,
+.wrapper>div {
+    /* background: #fff; */
+    background: #5f5f5f;
+}
+
+.wrapper>div p {
+    color: #ffffff;
+}
+
+table tr {
+    background: #c5bfbf;
+}
+
+.maxResult {
+    background: #5f9f45;
+}

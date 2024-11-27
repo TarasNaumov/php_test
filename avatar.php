@@ -1,4 +1,3 @@
-<?php require "functional/avatarSession.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

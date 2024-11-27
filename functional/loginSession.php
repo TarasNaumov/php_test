@@ -7,7 +7,4 @@ if (isset($_COOKIE['login'])) {
     }
 }
 
-if ($_COOKIE['registration'] == '') {
-    header("Location: registration.php");
-}
 ?>

@@ -51,6 +51,34 @@ table tr {
     background: #fff;
     /* background: #d6d6d6; */
     border-radius: 15px;
+    animation: opacityAnimation 1s linear;
+}
+/* 
+.all_user,
+.all_result {
+    animation-delay: 0.3s;
+}
+
+.last_test {
+    animation-delay: 0.6s;
+} */
+
+@keyframes opacityAnimation {
+    0% {
+        /* opacity: 0; */
+        margin: 20px 20px;
+    }
+
+    100% {
+        /* opacity: 1; */
+        margin: 0;
+    }
+}
+
+.all_user img {
+    width: 50px;
+    border-radius: 50%;
+    aspect-ratio: 1;
 }
 
 .all_result .table {
@@ -67,7 +95,8 @@ table {
     margin-bottom: 10px;
 }
 
-td {
+td, th {
+    text-align: center;
     padding: 5px;
     border: 1px solid #000;
 }

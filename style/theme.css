@@ -8,9 +8,10 @@ body,
 .login_data,
 .all_user,
 .all_result,
-.wrapper>div {
+.wrapper>div,
+.user_all_result {
     /* background: #fff; */
-    background: #5f5f5f;
+    background: #737373;
 }
 
 .wrapper>div p {

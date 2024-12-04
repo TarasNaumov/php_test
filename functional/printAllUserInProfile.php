@@ -1,4 +1,13 @@
 <table>
+    <thead>
+        <tr>
+            <th>Аватарка</th>
+            <th>Ім'я</th>
+            <th>Прізвище</th>
+            <th>Email</th>
+            <th>Результати</th>
+        </tr>
+    </thead>
     <?php $stream = fopen("csv/users.csv", "r"); ?>
     <?php $userData = []; ?>
     <?php while (($row = fgetcsv($stream)) !== false) { ?>
@@ -8,14 +17,13 @@
     <?php foreach ($userData as $user) { ?>
         <?php if ($user[0] != "Admin") { ?>
             <tr>
-                <td>Ім'я: <?= $user[0] ?></td>
-                <td>Фамілія: <?= $user[1] ?></td>
-                <td>Результат: <?= $user[4] ?? "непройшов" ?></td>
-                <td>Результат в відсотках: <?= $user[5] ?? "непройшов" ?></td>
-                <td>Дата: <?= $user[6] ?? "непройшов" ?></td>
+                <td><img src='img/<?= $user[4] ?? "profile.jpg"?>'> </td>
+                <td><?= $user[0] ?></td>
+                <td><?= $user[1] ?></td>
+                <td><?= $user[2] ?></td>
                 <td>
                     <form method="get" action="view_results.php">
-                        <button type="submit" name="user" value="<?= $user[0] ?>">Переглянути всі результати</button>
+                        <button type="submit" name="user" value="<?= $user[0] ?>">Переглянути</button>
                     </form>
                 </td>
             </tr>

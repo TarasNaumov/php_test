@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="style/profile.css">
+<?php require "functional/cheackTheme.php"; ?>
 <?php require "functional/resultFunctional.php"; ?>
 
 <div class="result">

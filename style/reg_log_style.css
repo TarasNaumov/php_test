@@ -21,6 +21,18 @@ form {
     padding: 20px;
     background: #fff;
     border-radius: 15px;
+    animation: formAnimate 1s linear;
+}
+
+@keyframes formAnimate {
+    0% {
+        opacity: 0;
+        margin-top: -30px;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 h2 {

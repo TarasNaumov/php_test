@@ -1,3 +1,4 @@
+<?php require "functional/functions.php"; ?>
 <?php require "functional/profilSession.php"; ?>
 <!DOCTYPE html>
 <html lang="en">

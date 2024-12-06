@@ -8,13 +8,9 @@
             <th>Результати</th>
         </tr>
     </thead>
-    <?php $stream = fopen("csv/users.csv", "r"); ?>
-    <?php $userData = []; ?>
-    <?php while (($row = fgetcsv($stream)) !== false) { ?>
-        <?php $userData[] = $row; ?>
-    <?php } ?>
+    <?php $usersData = readCvs("csv/users.csv", "r"); ?>
     <?php fclose($stream); ?>
-    <?php foreach ($userData as $user) { ?>
+    <?php foreach ($usersData as $user) { ?>
         <?php if ($user[0] != "Admin") { ?>
             <tr>
                 <td><img src='img/<?= $user[4] ?? "profile.jpg"?>'> </td>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php if (!isset($_SESSION['name'])) { ?>
     <?php setcookie('login'); ?>
     <?php header('Location: index.php'); ?>

@@ -1,14 +1,17 @@
 <?php
+require_once "functional/functions.php";
+
 $file = 'csv/' . $_SESSION['name'] . '.csv';
 
 $usersData = [];
 if (file_exists("csv/" . $_SESSION['name'] . ".csv")) {
 
     if (($stream = fopen($file, 'r')) !== false) {
-        while (($data = fgetcsv($stream)) !== false) {
-            $usersData[] = $data;
-        }
-    fclose($stream);
+        $usersData = readCvs($file, "r");
+    //     while (($data = fgetcsv($stream)) !== false) {
+    //         $usersData[] = $data;
+    //     }
+    // fclose($stream);
     }
 }
 
